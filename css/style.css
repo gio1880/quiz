@@ -1,3 +1,7 @@
+body {
+    background-color: white;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -9,11 +13,6 @@
 .logo {
     width: 125px;
 }
-
-body {
-    background-color: white;
-}
-
 .siliconValley {
     width: 50%;
     height:50%;
@@ -36,7 +35,22 @@ a {
 #tom {
     color: grey;
 }
-
+.ImgContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+.leftImg{
+    width: 40%;
+    text-align: center;
+    border:1px solid black;
+}
+.rightImg{
+    width: 40%;
+    text-align: center;
+    border:1px solid black;
+}
 .result {
    text-align:center;
 }
