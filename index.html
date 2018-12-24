@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Buzzfeed Quiz</title>
   <link type='text/css' rel='stylesheet' href='css/style.css' />
 </head>
-
 <body>
   <div class="header">
     <div><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/BuzzFeed.svg/1280px-BuzzFeed.svg.png"></div>
@@ -16,63 +14,214 @@
     <input placeholder="Search">
   </div>
   <!--Title-->
-  <h1>What type of boxer will you be ?</h1>
-  <p id="caption"> With dedication, you'll be there before you know it. </p>
-  <img id="tomImg" src="http://th.downloadblog.it/jSwEBLI80OIF2oYywP73GVj3zCo=/fit-in/655xorig/http%3A%2F%2Fmedia.downloadblog.it%2F5%2F57d%2Ftom-di-myspace.jpg">
-  <a href="https://en.wikipedia.org/wiki/Tom_Anderson">Tom Anderson</a>
-  <div id="tom">Buzzfeed Contributor</div>
-  <img class="siliconValley" src="https://www.hbo.com/content/dam/hbodata/series/silicon-valley/episodes/s3/silicon-valley-3-3000x1688.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg">
-  <!--Test-->
-  <div class="questions">
-    <!--Name-->
+  <div class="Test active" id="s1">
+    <h1>What type of boxer will you be ?</h1>
+    <p id="caption"> With dedication, you'll be there before you know it. </p>
+    <img id="tomImg" src="http://th.downloadblog.it/jSwEBLI80OIF2oYywP73GVj3zCo=/fit-in/655xorig/http%3A%2F%2Fmedia.downloadblog.it%2F5%2F57d%2Ftom-di-myspace.jpg">
+    <a href="https://en.wikipedia.org/wiki/Tom_Anderson">Tom Anderson</a>
+    <div id="tom">Buzzfeed Contributor</div>
+    <img class="siliconValley" src="https://www.hbo.com/content/dam/hbodata/series/silicon-valley/episodes/s3/silicon-valley-3-3000x1688.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg"> 
+    <div class="nextQuestion"><button id="t1">Start Test</button></div>
+  </div>
+  <!--Test--><!--Name-->
+  <div class="Test" id="s2">
     <h2>Let's start with your Name</h2>
     <input id="name" placeholder="Enter Your Name Here">
-    <!--Question 1-->
+    <div class="nextQuestion"><button id="t2">Begin Test</button></div>
+  </div>
+  <!--Question 1-->
+  <div class="Test" id="s3">
     <h2> If you were in a boxing match would you wait for your opponent to make the first move or will you make the first move?</h2>
-    <div class="ImgContainer">
-      <div class="leftImg"><p class="boxerPuncher">Wait for your opponent</p></div>
-      <div class="rightImg"><p class="swarmer">Make the first move</p></div>
-    </div>
-    <!--Question 2-->
-    <h2> Do you consider yourself light on your feet ?</h2>
-    <div class="ImgContainer">
-      <div class="leftImg"><p class="boxerPuncher">Ligh Footed</p></div>
-      <div class="rightImg"><p class="slugger">Flat Footed</p></div>
-    </div>
-    <!--Question 3-->
-    <h2>In a boxing match will you keep your distance from your opponent or constantly apply pressure, keeping the distance between you and the opponent short?</h2>
-    <div class="ImgContainer">
-      <div class="leftImg"><p class="boxerPuncher">Keep your distance</p></div>
-      <div class="rightImg"><p class="swarmer">Stay Close</p></div>
-    </div>
-    <!--Question 4-->
-    <h2>Choose the ones you consider to be your strengths?</h2>
-    <div class="ImgContainer">
-      <div class="leftImg"><p class="slugger">Strength</p></div>
-      <div class="rightImg"><p class="swarmer">Speed</p></div>
-      <div class="rightImg"><p class="boxerPuncher">Both</p></div>
-    </div>
-    <!--Question 5-->
-    <h2>What type of punches would you perfer to throw?</h2>
-    <div class="ImgContainer">
-      <div class="leftImg"><p class="boxerPuncher">Long Range Punches</p></div>
-      <div class="rightImg"><p class="swarmer">Short Range Punches</p></div>
-      <div class="rightImg"><p>Wil use a combination of both</p></div>
-    </div>
-    <!--Question 6-->
-    <h2>Choose one?</h2>
-    <div class="ImgContainer">
-      <div class="leftImg"><p class="slugger">Will not worry about technique (brawler)</p></div>
-      <div class="rightImg"><p class="boxerPuncher">Will want to figth with technique</p></div>
+    <div class="answerContainer">
+      <div class="answer"><p class="outBoxer">Wait for your opponent</p></div>
+      <div class="answer"><p class="swarmer">Make the first move</p></div>
     </div>
   </div>
-  
-  <!--Results-->
-  <div class="result">
-    <button>Click here to understand your boxing style!</button>
+    <!--Question 2-->
+  <div class="Test" id="s4">  
+    <h2> Choose the One that best fits you</h2>
+    <div class="answerContainer">
+      <div class="answer"><p class="boxerPuncher">Ligh Footed</p></div>
+      <div class="answer"><p class="slugger">Flat Footed</p></div>
+    </div>
+  </div>
+  <!--Question 3-->
+  <div class="Test" id="s5">  
+    <h2>In a boxing match will you keep your distance from your opponent or constantly apply pressure, keeping the distance between you and the opponent short?</h2>
+    <div class="answerContainer">
+      <div class="answer"><p class="outBoxer">Keep your distance</p></div>
+      <div class="answer"><p class="swarmer">Stay Close</p></div>
+      <div class="answer"><p class="boxerPuncher">You dont care</p></div>
+    </div>
+  </div>    
+  <!--Question 4-->
+  <div class="Test" id="s6">  
+    <h2>Choose the ones you consider to be your strengths?</h2>
+    <div class="answerContainer">
+      <div class="answer"><p class="slugger">Strength</p></div>
+      <div class="answer"><p class="swarmer">Speed</p></div>
+      <div class="answer"><p class="boxerPuncher">Both</p></div>
+    </div>
+  </div>    
+  <!--Question 5-->
+  <div class="Test" id="s7">  
+    <h2>What type of punches would you perfer to throw?</h2>
+    <div class="answerContainer">
+      <div class="answer"><p class="outBoxer">Long Range Punches</p></div>
+      <div class="answer"><p class="swarmer">Short Range Punches</p></div>
+      <div class="answer"><p class="boxerPuncher">Wil use a combination of both</p></div>
+    </div>
+  </div>  
+  <!--Question 6-->
+  <div class="Test" id="s8">  
+    <h2>Choose one?</h2>
+    <div class="answerContainer">
+      <div class="answer"><p class="slugger">Will not worry about technique (brawler)</p></div>
+      <div class="answer"><p class="boxerPuncher">Will want to figth with technique</p></div>
+    </div>
+  </div>
+  <!--Question 7-->
+  <div class="Test" id="s9">  
+    <h2>Choose one?</h2>
+    <div class="answerContainer">
+      <div class="answer"><p class="slugger">can take many punches</p></div>
+      <div class="answer"><p class="swarmer">can not take many punches,  weak chin</p></div>
+    </div>
+    <!--Question 8-->
+    <div class="Test" id="s10">  
+    <h2>Do you have a short or long arms?</h2>
+    <div class="answerContainer">
+      <div class="answer"><p class="swarmer">Short arms</p></div>
+      <div class="answer"><p class="outboxer">long arms </p></div>
+      <div class="answer"><p class="slugger">Average</p></div>
+  </div>
+  <!--Content for the Different types of Boxing Styles-->
+  <div class="Test" id="s11" >
+    <div class="contentContainer">
+      <div class="leftContent">
+        <h1>Hey <span class="inputName">__Name__</span></h1>
+        <p> Based on your answers, we believe you are a out-boxer. An out-boxer is widely regarded as the most traditional style of boxing. When most people attend a boxing match, this is the kind of boxing they want to see. It’s the most technically perfect style, and it’s what people expect when they think of boxing.  It can be exciting to watch because it requires the boxer to come in for a quick succession of hits, or even just a single hit, and then back off again. Some consider it to be boring, because the boxers also spend a lot of time waiting for the right moment to strike, but for those that love strategy, it is the best style to watch.</p>
+        <p>Many boxers who use this style of pure boxing will wait for their opponent to make the first move or to move in on them before stepping out to land any punches. They generally have to have a long reach, because they like to maintain distance from their opponents, preferring to land long range punches. Quick on their feet and preferring jabs and straight punches, rather than the hooks and uppercuts preferred by swarmers, out-boxers rarely get knockdown or knockout bonuses, instead winning by being apt decision makers and by landing clean, legal punches.</p>
+        <p>Of course, there are some exceptions to every rule. Those with great reaches have been able to earn those aggression points by landing harder punches on their opponents from the outside. They are most susceptible to swarmers, who move just as quickly and who overwhelm them with their punches, giving the out-boxer no time to think and no openings. Despite the fact that they are easily overwhelmed by a boxer who swarms or crowds, an out-boxer is cautious. They play the game their way, making smart decisions about where to strike and when, rather than wasting their stamina with quick flurries of punches.</p>
+      </div>
+      <div class="rightContent">
+        <h1>Notable Out-Boxers</h1>
+        <div class="Container">
+          <div class="imgContainer">
+            <h4>Mohumad Ali</h4>
+            <img src="https://static.boxrec.com/thumb/4/43/Ali_480938006.jpg/200px-Ali_480938006.jpg">
+          </div>
+          <div class="imgContainer">
+            <h4>Jones Junior</h4>
+            <img src="https://www.ringtv.com/wp-content/uploads/2013/12/file_182739_3_Jones_Junior_w_WBO_title_RING.jpg">
+          </div>
+          <div class="imgContainer">
+            <h4>Wilfred Benitez</h4>
+            <img src="http://ringsidereport.com/wp-content/uploads/2014/12/300px-Wilfred_Benitez07-240x300.jpg">
+          </div>
+          <div class="imgContainer">
+            <h4>Wilfred Benitez</h4>
+            <img src="http://www1.pictures.zimbio.com/gi/Floyd+Mayweather+Jr+v+Juan+Manuel+Marquez+JuySfTJQ3Kgx.jpg">
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+  <div class="Test" id="s12">
+    <div class="contentContainer">
+      <div class="leftContent">
+        <h1>Hey <span class="inputName">__Name__</span></h1>
+        <p>Based on your answers we believe you are a swarmer. The swarmer style is sometimes called the crowder or the in-fighter, the swarmer is a boxer who endeavors to beat his opponent by being both very defensive and by putting consistent pressure on that opponent. They just keep punching and punching, giving their opponent little room to get a punch in edgewise. This is one of the more difficult styles to achieve, as it requires nearly perfect form and the stamina to continually apply pressure to the other fighter.</p>
+        <p>Most boxers endeavor to achieve the status of a swarmer, but it takes years of training to perfect the form and the technique required to really overwhelm an opponent with punches. Because of the time required to get up to this skill level and to build the necessary stamina, most boxers who claim the swarmer style have comparatively short careers. It is difficult to maintain, as it requires constant training, and it is easy to fall out of, which leaves to boxer open to punishing hits, which can further shorten their career.</p>
+        <p>Most boxers who use this style do it by closing in on an opponent and then sending out intense, fast uppercuts and hooks. As they are throwing these punches, they also have to be able to avoid whatever punches their opponent is sending out. Because it usually takes a moment to get into the right position, these boxers either have to be able to withstand many punches before they can start throwing their own, or have to be swift enough to first evade, and then move inside their opponent.</p>
+      </div>
+      <div class="rightContent">
+        <h1>Notable Swarmer Style Boxers</h1>
+        <div class="Container">
+          <div class="imgContainer">
+            <h4>Julio César Chávez</h4>
+            <img src="https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/I/m/Julio_Cesar_Chavez1_Champ.jpg">
+          </div>
+          <div class="imgContainer">
+            <h4>Joe Frazier</h4>
+            <img src="https://www.boulderweekly.com/wp-content/uploads/2011/11/2866.jpg">
+          </div>
+          <div class="imgContainer">
+            <h4>Gennady Golovkin</h4>
+            <img src="https://media.spokesman.com/photos/2016/04/23/AP_161151396770712.jpg">
+          </div>
+          <div class="imgContainer">
+            <h4>Mike Tyson</h4>
+            <img src="https://pbs.twimg.com/profile_images/810887013356314624/E1Uu6n58_400x400.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Test" id="s13">
+    <div class="contentContainer">
+      <div class="leftContent">
+        <h1>Hey <span class="inputName">__Name__</span></h1>
+        <p>Based on your answers we believe you are a Slugger. The Slugger style is the true brawler. He relies on the brutality of his punches to win the bout, rather than on strategy and a well-placed hits. What they lack in technique, they make up for in strength and raw ferocity. This is likely the style of boxing that the Ancient Greeks and Brits who revived the sport participated in. Very few rules, just hard, devastating punches.</p>
+        <p>Unlike other fighters who rely on timing or on the sheer number of punches, the slugger will attempt to land just a few, high-power punches. While they are often a predictable and even slow opponent, the bouts are often extremely unpredictable, as a single punch could knock an opponent out cold and win the slugger the entire fight. It could even be the first punch of the round!</p>
+        <p>Sluggers are usually uncreative with their technique and punching pattern. This makes it easy for an opponent to predict how and where a slugger is going to hit, and while they might not be able to block the slugger’s hits, they can wait until the slugger sends a slow, powerful punch their way and land a few hits as the slugger opens themselves up to them.</p>
+        <p>If you put two sluggers in a ring together, the fight will be brutal, which makes an exciting match for spectators, who might get bored watching two out-boxers pace around each other. Sluggers and swarmers also put on a good show, as neither is very concerned with caution or strategy, but both want to get in good punches, as quickly as possible. Casual fans of boxing often prefer seeing a slugger fight a swarmer, as there is always plenty of action.</p>
+      </div>
+      <div class="rightContent">
+        <h1>Notable Slugger Style Boxers</h1>
+        <div class="Container">
+          <div class="imgContainer">
+            <h4>George Foreman</h4>
+            <img src="https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/I/m/George_Foreman_2009.jpg">
+          </div>
+          <div class="imgContainer">
+            <h4>Bob Fitzsimmons</h4>
+            <img src="https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/I/m/Robert_Fitzsimmons.jpg">
+          </div>
+          <div class="imgContainer">
+            <h4>Max Baer (boxer)</h4>
+            <img src="https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/I/m/Max_Baer_publicity-A.jpg">
+          </div>
+          <div class="imgContainer">
+            <h4>John L. Sullivan</h4>
+            <img src="https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/I/m/John_L_Sullivan.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Test" id="s14">
+    <div class="contentContainer">
+      <div class="leftContent">
+        <h1>Hey <span class="inputName">__Name__</span></h1>
+        <p>Based on answers we believe you are a Boxer Puncher. Boxer-puncher boxers are hybrids. They have the power of sluggers, but the technique of an out-boxer. They are considered to be well-rounded fighters, who can compete with just about any other style in the ring. Because their focus is on speed and power, they can usually dominate an out-boxer, tire out a swarmer, and out-punch a slugger. This is widely believed to be the ideal style, but it requires a boxer to be both fast and strong, which is not something that all boxers, especially in the higher weight categories, are able to achieve.</p>
+        <p>Most people consider the heavy slugger to be the only weakness of the boxer-puncher, and only if that slugger can get in his one, devastating hit before the boxer-puncher has the chance to either tire him out or out-technique him. When faced with a swarmer, a boxer-puncher can use his powerful punches to prevent that swarmer to ever get inside and land their punches. They can match an out-boxer’s speed and technique, while also bringing the power that it takes to really devastate the out-boxer.</p>
+        <p>These boxers are extremely versatile. They do not necessarily have to rely just on speed or just on technique or just on power in order to win a bout. They have many skills to draw on, which makes them good aggressors and good counter-punchers. Unlike swarmers who can sometimes get too close and open themselves up to too many hits, a boxer-puncher takes control of the ring, watches his opponent, does what he needs to do, and uses his opponent’s mistakes to his advantage. They generally have great chin, are excellent at defense, and are highly mobile.</p>
+      </div>
+      <div class="rightContent">
+        <h1>Notable Boxer Puncher Style Boxers</h1>
+        <div class="Container">
+          <div class="imgContainer">
+            <h4>Manny Pacquiao</h4>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTByaXz1s2oruXq9JIvpeL0obTNo2A5fX9kd2fuV9QozjDyHPHJ">
+          </div>
+          <div class="imgContainer">
+            <h4>Oscar De La Hoya</h4>
+            <img src="http://realcombatmedia.com/wp-content/uploads/2013/09/Oscar-on-the-Ropes.jpg">
+          </div>
+          <div class="imgContainer">
+            <h4>Vasyl Lomachenko</h4>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXxbj0rOccjS9YUpggfnFBUgG0OLAga9Yv5mS_K8cR6NCfBXWkKQ">
+          </div>
+          <div class="imgContainer">
+            <h4>Sugar Ray Leonard</h4>
+            <img src="http://boxrec.com/media/images/thumb/f/f6/SRL105222258.jpg/200px-SRL105222258.jpg">
+          </div>
+        </div>
+      </div>
+    </div>  
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src='js/script.js'></script>
 </body>
-
 </html>

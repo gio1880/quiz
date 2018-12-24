@@ -17,7 +17,18 @@ body {
     width: 50%;
     height:50%;
 }
-
+.boxerPuncher{
+    border:1px solid blue;
+}
+.swarmer{
+    border:1px solid orange;
+}
+.slugger{
+    border:1px solid purple;
+}
+.outBoxer{
+    border:1px solid red;
+}
 #caption {
     font-size: 20px;
 }
@@ -35,21 +46,18 @@ a {
 #tom {
     color: grey;
 }
-.ImgContainer{
+.answerContainer{
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
+    justify-content:center;
 }
-.leftImg{
+.answer{
     width: 40%;
     text-align: center;
     border:1px solid black;
-}
-.rightImg{
-    width: 40%;
-    text-align: center;
-    border:1px solid black;
+    margin: .5%
 }
 .result {
    text-align:center;
@@ -66,6 +74,46 @@ button {
 }
 
 body{
-
     margin-left:20px;
+}
+/*.Test{*/
+/*    visibility:collapse;*/
+/*    height:0px;*/
+/*    transition:all .2s;*/
+/*    box-sizing: border-box;*/
+/*    border:solid 1px transparent;*/
+/*}*/
+.Test.active {
+    visibility:visible;
+    height:100vh;
+}
+.contentContainer{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 auto;
+}
+.leftContent{
+    width:40%;
+}
+.rightContent{
+    text-align:center;
+    width:60%;    
+}
+img{
+    width:60%;
+}
+.Container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+.imgContainer{
+    width: 40%;
+    text-align: center;
+}
+.rightImg{
+    width: 40%;
+    text-align: center;
 }

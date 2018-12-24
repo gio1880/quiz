@@ -1,51 +1,100 @@
 /* global $ */
 
 $(document).ready(function() {
-    
-    var totalScore = 0;
-    var numberofclicks = 0;
-    
-    $(".rightImg").click(function() {
-        var name = $("#name").val();
-        var techPlacement = "TBD";
-        var imgSrc = "https://media.giphy.com/media/22zgHX8aop488/giphy.gif";
-    });
+    // Point Variables
+    var outboxerPoints = 0;
+    var swarmerPoints = 0;
+    var sluggerPoints = 0;
+    var boxerPuncherPoints = 0;
+    var highestOfTwo = 0;
+    var highestOfAll = 0;
+    var highestOfThree = 0;
+    // Slide Id Variables
+    var introSlide = "s1";
+    var activeSlideId = introSlide;
+    var name;
+    var outBoxerSlideId = 11;
+    var swarmerSlideId = 12;
+    var sluggerSlideId = 13;
+    var boxerPuncherSlideId =14;
     $(".outBoxer").click(function() {
-        totalScore = + outBoxer();
-        numberofclicks = +1;
-        console.log(totalScore);
+        outboxerPoints = pointSystem(outboxerPoints);
+        console.log("slugger:" + sluggerPoints);
+        nextSlideFunction();
     });
     $(".swarmer").click(function() {
-        totalScore = + swarmer();
-        console.log(totalScore);
+        swarmerPoints = pointSystem(swarmerPoints);
+        console.log("swarmer:" + swarmerPoints);
+        nextSlideFunction();
     });
     $(".slugger").click(function() {
-        totalScore = + slugger();
-        console.log(totalScore);
+        sluggerPoints = pointSystem(sluggerPoints);
+        console.log("slugger:" + sluggerPoints);
+        nextSlideFunction();
     });
     $(".boxerPuncher").click(function() {
-        totalScore = + boxerPuncher();
-        console.log(totalScore);
+        boxerPuncherPoints = pointSystem(boxerPuncherPoints);
+        console.log("boxerPuncher:"+outboxerPoints);
+        nextSlideFunction();
     });
-    $(".boxerPuncher").click(function() {
-        totalScore = + boxerPuncher();
-        console.log(totalScore);
+    $(".nextQuestion button").click(function(){
+        var slideNum = parseInt(activeSlideId.substring(1,2));
+        $("#"+activeSlideId).removeClass("active");
+        slideNum++;
+        activeSlideId="s"+slideNum;
+        $("#"+activeSlideId).addClass("active");
+        name = $("#name").val();
+        $(".inputName").text(name);
     });
-    $("button").click(function() {
-        if(totalScore<14){
-            
+    function nextSlideFunction (){
+        var slideNum = parseInt(activeSlideId.substring(1,2));
+        $("#"+activeSlideId).removeClass("active");
+        if (slideNum===9){
+            gameLogic();
+            slideNum=gameLogic();
         }
-    });
-    function outBoxer() {
-        return 1;    
+        else{
+            slideNum++;    
+        }
+        activeSlideId="s"+slideNum;
+        $("#"+activeSlideId).addClass("active");
     }
-    function swarmer() {
-        return 2;
+    function pointSystem (typeOfPoints){
+        return typeOfPoints + 1;
     }
-    function slugger() {
-        return 3;
+    function maxOfTwoNum (numOne,numTwo){
+        if(numOne>numTwo){
+            return numOne;
+        }
+        else{
+            return numTwo;
+        }
     }
-    function boxerPuncher(){
-        return 4;        
+    function gameLogic(){
+        highestOfTwo = maxOfTwoNum(outboxerPoints,swarmerPoints);
+        highestOfThree = maxOfTwoNum(highestOfTwo,sluggerPoints);
+        highestOfAll = maxOfTwoNum(highestOfTwo,boxerPuncherPoints);
+        
+        if(highestOfAll === outboxerPoints){
+            console.log(highestOfTwo);
+            console.log("style: out boxer");    
+            return outBoxerSlideId;
+        }
+        else if(highestOfAll === swarmerPoints){
+            console.log(highestOfTwo);
+            console.log("style: swarmer");
+            return swarmerSlideId;
+        }
+        else if (highestOfAll === sluggerPoints){
+            console.log(highestOfTwo);
+            console.log("style: slugger");
+            return sluggerSlideId;
+        }
+        else{
+            return boxerPuncherSlideId;
+        }
     }
+    
+    
+    
 });
