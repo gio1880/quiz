@@ -1,119 +1,108 @@
 body {
-    background-color: white;
+  background-color: #0B0C10;
+  color:#66FCF1;
+  font-size: 130%;
 }
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    color: #0f65ef;
-    font-weight: bold;
-    font-size:15px;
-}
-
-.logo {
-    width: 125px;
-}
-.siliconValley {
-    width: 50%;
-    height:50%;
-}
-.boxerPuncher{
-    border:1px solid blue;
-}
-.swarmer{
-    border:1px solid orange;
-}
-.slugger{
-    border:1px solid purple;
-}
-.outBoxer{
-    border:1px solid red;
-}
-#caption {
-    font-size: 20px;
-}
-
-#tomImg {
-    border-radius: 50%;
-    width: 50px;
-}
-
 a {
-    color: #0f65ef;
-    font-weight: bold;
+  color: #0f65ef;
+  font-weight: bold;
 }
-
-#tom {
-    color: grey;
-}
-.answerContainer{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: 0 auto;
-    justify-content:center;
-}
-.answer{
-    width: 40%;
-    text-align: center;
-    border:1px solid black;
-    margin: .5%
-}
-.result {
-   text-align:center;
-}
-
-button {
-    margin-top: 10px;
-    color: white;
-    background-color: red;
-    font-size: 40px;
-    border-radius: 25px;
-    border:3px groove black ;
-    font-family: monospace;
-}
-
-body{
-    margin-left:20px;
-}
-/*.Test{*/
-/*    visibility:collapse;*/
-/*    height:0px;*/
-/*    transition:all .2s;*/
-/*    box-sizing: border-box;*/
-/*    border:solid 1px transparent;*/
-/*}*/
-.Test.active {
-    visibility:visible;
-    height:100vh;
-}
-.contentContainer{
-    display: flex;
-    flex-wrap: wrap;
-
-    margin: 0 auto;
-}
-.leftContent{
-    width:40%;
-}
-.rightContent{
-    text-align:center;
-    width:60%;    
+h2{
+  text-align:center;
+  background:#1F2833;
+  margin:5%;
+  padding:4%;
 }
 img{
-    width:60%;
+  width:60%;
+}
+button {
+  margin-top: 10px;
+  color: white;
+  background-color: red;
+  font-size: 40px;
+  border-radius: 25px;
+  border:3px groove black ;
+  font-family: monospace;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: #0f65ef;
+  font-weight: bold;
+  font-size:15px;
+}
+.logo {
+  width: 125px;
+}
+.siliconValley {
+  width: 50%;
+  height:50%;
+}
+#caption {
+  font-size: 20px;
+}
+#tomImg {
+  border-radius: 50%;
+  width: 50px;
+}
+#tom {
+  color: grey;
+}
+#name{
+  text-align:center;
+  padding:1%;
+}
+.Test{
+  visibility:collapse;
+  height:0px;
+  transition:all .2s;
+  box-sizing: border-box;
+  border:solid 1px transparent;
+}
+.Test.active {
+  visibility:visible;
+  height:100vh;
+  text-align:center
+}
+.answerContainer{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  justify-content:center;
+}
+.answer{
+  width: 40%;
+  text-align: center;
+  margin: .5%;
+  background:#1F2833;
+}
+.answer:hover{
+  opacity: .2;
+}
+.contentContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+.leftContent{
+  width:40%;
+}
+.rightContent{
+  text-align:center;
+  width:60%;    
 }
 .Container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
 }
 .imgContainer{
-    width: 40%;
-    text-align: center;
+  width: 40%;
+  text-align: center;
 }
 .rightImg{
-    width: 40%;
-    text-align: center;
+  width: 40%;
+  text-align: center;
 }
